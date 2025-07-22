@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SDG Webpage</title>
+<style>
+    body {
+      font-family: sans-serif;
+      line-height: 1.5;
+      background-color: #fff;
+      margin: 0;
+    }
+ 
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #36013f;
+    }
+ 
+    .header {
+      background-color: #000000;
+      color: #fff;
+      padding: 25px;
+      text-align: center;
+        border: 2px solid #ffffff;
+    }
+ 
+    .header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      font-weight: bold;
+    }
+ 
+    .main {
+      display: flex;
+    }
+ 
+    .sidebar {
+      width: 250px;
+      background-color: #000000;
+      padding: 20px;
+      box-sizing: border-box;
+      border: 2px solid #ffffff; /* White border */
+    }
+ 
+    .sidebar h2 {
+      color: #fff;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+ 
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+ 
+    .sidebar ul li {
+      margin-bottom: 8px;
+    }
+ 
+    .sidebar ul li a {
+      text-decoration: none;
+      font-weight: bold;
+    }
+ 
+    .sidebar ul li:nth-child(1) a { color: #e5243b; }
+    .sidebar ul li:nth-child(2) a { color: #dda63a; }
+    .sidebar ul li:nth-child(3) a { color: #4c9f38; }
+    .sidebar ul li:nth-child(4) a { color: #c5192d; }
+    .sidebar ul li:nth-child(5) a { color: #ff3a21; }
+    .sidebar ul li:nth-child(6) a { color: #26bde2; }
+    .sidebar ul li:nth-child(7) a { color: #fcc30b; }
+    .sidebar ul li:nth-child(8) a { color: #a21942; }
+    .sidebar ul li:nth-child(9) a { color: #fd6925; }
+    .sidebar ul li:nth-child(10) a { color: #dd1367; }
+    .sidebar ul li:nth-child(11) a { color: #fd9d24; }
+    .sidebar ul li:nth-child(12) a { color: #bf8b2e; }
+    .sidebar ul li:nth-child(13) a { color: #3f7e44; }
+    .sidebar ul li:nth-child(14) a { color: #0a97b0; }
+    .sidebar ul li:nth-child(15) a { color: #56c02b; }
+    .sidebar ul li:nth-child(16) a { color: #00689d; }
+    .sidebar ul li:nth-child(17) a { color: #19486a; }
+ 
+    .content {
+      flex: 1;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+ 
+    .content h2 {
+      text-align: center;
+        font-size: 2.5em;
+        color: #fff;
+    }
+ 
+    .content p {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+ 
+    .sdg-grid {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 10px;
+      justify-items: center;
+      align-items: center;
+    }
+ 
+    .sdg-goal {
+      width: 170px;
+      height: 180px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 0px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+      font-size: 0.75em;
+    }
+ 
+    .sdg-goal img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      margin-bottom: 0;
+    }
+ 
+    .sdg-goal span {
+      font-size: 1.2em;
+      margin-bottom: 3px;
+    }
+ 
+    .sdg-goal:nth-child(1) { background-color: #e5243b; }
+    .sdg-goal:nth-child(2) { background-color: #dda63a; }
+    .sdg-goal:nth-child(3) { background-color: #4c9f38; }
+    .sdg-goal:nth-child(4) { background-color: #c5192d; }
+    .sdg-goal:nth-child(5) { background-color: #ff3a21; }
+    .sdg-goal:nth-child(6) { background-color: #26bde2; }
+    .sdg-goal:nth-child(7) { background-color: #fcc30b; }
+    .sdg-goal:nth-child(8) { background-color: #a21942; }
+    .sdg-goal:nth-child(9) { background-color: #fd6925; }
+    .sdg-goal:nth-child(10) { background-color: #dd1367; }
+    .sdg-goal:nth-child(11) { background-color: #fd9d24; }
+    .sdg-goal:nth-child(12) { background-color: #bf8b2e; }
+    .sdg-goal:nth-child(13) { background-color: #3f7e44; }
+    .sdg-goal:nth-child(14) { background-color: #0a97b0; }
+    .sdg-goal:nth-child(15) { background-color: #56c02b; }
+    .sdg-goal:nth-child(16) { background-color: #00689d; }
+    .sdg-goal:nth-child(17) { background-color: #19486a; }
+ 
+    .footer {
+      background-color: #000000;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      font-size: 1.5em;
+        border: 2px solid #ffffff;
+    }
+	.back-button {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: #4d94ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  
+}
+
+.back-button:hover {
+  
+}
+
+</style>
+</head>
+<body>
+<a href="projects.html" class="back-button">← Back to Projects</a>
+<div class="container">
+<header class="header">
+<h1>United Nations Sustainable Development Goals (SDGs)</h1>
+</header>
+ 
+    <div class="main">
+<aside class="sidebar">
+<h2>UN SDGs</h2>
+<ul>
+<li><a href="#">Goal 1: No Poverty</a></li>
+<li><a href="#">Goal 2: Zero Hunger</a></li>
+<li><a href="#">Goal 3: Good Health and Well-being</a></li>
+<li><a href="#">Goal 4: Quality Education</a></li>
+<li><a href="#">Goal 5: Gender Equality</a></li>
+<li><a href="#">Goal 6: Clean Water and Sanitation</a></li>
+<li><a href="#">Goal 7: Affordable and Clean Energy</a></li>
+<li><a href="#">Goal 8: Decent Work and Economic Growth</a></li>
+<li><a href="#">Goal 9: Industry, Innovation and Infrastructure</a></li>
+<li><a href="#">Goal 10: Reduced Inequalities</a></li>
+<li><a href="#">Goal 11: Sustainable Cities and Communities</a></li>
+<li><a href="#">Goal 12: Responsible Consumption and Production</a></li>
+<li><a href="#">Goal 13: Climate Action</a></li>
+<li><a href="#">Goal 14: Life Below Water</a></li>
+<li><a href="#">Goal 15: Life on Land</a></li>
+<li><a href="#">Goal 16: Peace, Justice and Strong Institutions</a></li>
+<li><a href="#">Goal 17: Partnerships for the Goals</a></li>
+</ul>
+</aside>
+ 
+      <div class="content">
+<h2>"17 Goals. One Future."</h2>
+<div class="sdg-grid">
+<div class="sdg-goal"><img src="C:\Users\Gmulleda\Downloads\E-Goal-01-1024x1024.png" alt="SDG 1"><span></span></div>
+<div class="sdg-goal"><img src="C:\Users\Gmulleda\Downloads\17 sdgs.png" alt="SDG 2"><span></span></div>
+<div class="sdg-goal"><img src="C:\Users\Gmulleda\Downloads\1_bD6Q8IDG3Ef444SAOnNiyg.png" alt="SDG 3"><span></span> </div>
+<div class="sdg-goal"><img src="C:\Users\Gmulleda\Downloads\goal4.d9c14540d19e.png" alt="SDG 4"><span></span> </div>
+<div class="sdg-goal"><img src="C:\Users\Gmulleda\Downloads\gq.jpg" alt="SDG 5"><span></span> </div>
+<div class="sdg-goal"><img src="C:\Users\Gmulleda\Downloads\cq.png" alt="SDG 6"><span></span></div>
+<div class="sdg-goal"><img src="C:\Users\Gmulleda\Downloads\yyw.png" alt="SDG 7"><span></span> </div>
+<div class="sdg-goal"><img src="C:\Users\Gmulleda\Downloads\dcq.png" alt="SDG 8"><span></span> </div>
+<div class="sdg-goal"><img src="C:\Users\Gmulleda\Downloads\as.png" alt="SDG 9"><span></span> </div>
+<div class="sdg-goal"><img src="C:\Users\Gmulleda\Downloads\ri.png" alt="SDG 10"><span></span> </div>
+<div class="sdg-goal"><img src="C:\Users\Gmulleda\Downloads\11.png" alt="SDG 11"><span></span> </div>
+<div class="sdg-goal"><img src="C:\Users\Gmulleda\Downloads\12.png" alt="SDG 12"><span></span></div>
+<div class="sdg-goal"><img src="C:\Users\Gmulleda\Downloads\13s.png" alt="SDG 13"><span></span> </div>
+<div class="sdg-goal"><img src="C:\Users\Gmulleda\Downloads\14.png" alt="SDG 14"><span></span> </div>
+<div class="sdg-goal"><img src="C:\Users\Gmulleda\Downloads\15.png" alt="SDG 15"><span></span></div>
+<div class="sdg-goal"><img src="C:\Users\Gmulleda\Downloads\16.png" alt="SDG 16"><span></span> </div>
+<div class="sdg-goal"><img src="C:\Users\Gmulleda\Downloads\17s.png" alt="SDG 17"><span></span></div>
+<div class="sdg-goal"><img src="C:\Users\Gmulleda\Downloads\sad.jpg" alt="SDG 17"><span></span></div>
+<div class="sdg-goal"><img src="C:\Users\Gmulleda\Downloads\UN.png" alt="SDG 17"><span></span></div>
+</div>
+</div>
+</div>
+ 
+    <footer class="footer">
+<p>&copy; United Nation 2025</p>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>UN 17 SDG Registration Form</title>
+<style>
+    * {
+      box-sizing: border-box;
+    }
+ 
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #d4edda, #a8dadc);
+      margin: 0;
+      padding: 40px 20px;
+      color: #333;
+    }
+ 
+    .form-container {
+      max-width: 700px;
+      margin: auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+ 
+    h2 {
+      text-align: center;
+      color: #2d6a4f;
+      margin-bottom: 10px;
+    }
+ 
+    .description {
+      text-align: center;
+      font-size: 0.95rem;
+      margin-bottom: 25px;
+      color: #555;
+    }
+ 
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: 600;
+      color: #2d6a4f;
+    }
+ 
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      transition: border 0.3s ease;
+    }
+ 
+    input:focus,
+    select:focus {
+      border-color: #2d6a4f;
+      outline: none;
+    }
+ 
+    .sdg-options {
+      margin-top: 15px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 10px;
+    }
+ 
+    .sdg-options label {
+      font-weight: normal;
+      font-size: 0.92rem;
+      display: flex;
+      align-items: center;
+      background: #f1fdf3;
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid #c3e6cb;
+    }
+ 
+    .sdg-options input[type="checkbox"] {
+      margin-right: 10px;
+    }
+ 
+    button {
+      margin-top: 30px;
+      width: 100%;
+      padding: 12px;
+      background-color: #2d6a4f;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+ 
+    button:hover {
+      background-color: #22543d;
+    }
+ 
+    @media (max-width: 500px) {
+      .sdg-options {
+        grid-template-columns: 1fr;
+      }
+    }
+	
+	.back-button {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: #4d94ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  
+}
+
+.back-button:hover {
+  
+}
+
+</style>
+</head>
+<body>
+<a href="projects.html" class="back-button">← Back to Projects</a>
+ 
+  <div class="form-container">
+<h2>UN 17 SDG Registration Form</h2>
+<p class="description">
+      Join us in shaping a sustainable future by supporting the UN’s 17 Sustainable Development Goals.
+      Please register below. <strong>Note: Only individuals aged 18 and above may apply.</strong>
+</p>
+ 
+    <form>
+<label for="fullname">Full Name:</label>
+<input type="text" id="fullname" name="fullname" required />
+ 
+      <label for="email">Email Address:</label>
+<input type="email" id="email" name="email" required />
+ 
+      <label for="age">Age:</label>
+<input type="number" id="age" name="age" min="18" required />
+ 
+      <label for="gender">Gender:</label>
+<select id="gender" name="gender" required>
+<option value="">--Select Gender--</option>
+<option value="male">Male</option>
+<option value="female">Female</option>
+<option value="non_binary">Non-binary</option>
+<option value="transgender">Transgender</option>
+<option value="genderqueer">Genderqueer</option>
+<option value="agender">Agender</option>
+<option value="two_spirit">Two-Spirit</option>
+<option value="prefer_not_say">Prefer not to say</option>
+<option value="other">Other</option>
+</select>
+ 
+      <label>SDG(s) of Interest:</label>
+<div class="sdg-options">
+<label><input type="checkbox" name="sdg" value="1"> No Poverty</label>
+<label><input type="checkbox" name="sdg" value="2"> Zero Hunger</label>
+<label><input type="checkbox" name="sdg" value="3"> Good Health and Well-being</label>
+<label><input type="checkbox" name="sdg" value="4"> Quality Education</label>
+<label><input type="checkbox" name="sdg" value="5"> Gender Equality</label>
+<label><input type="checkbox" name="sdg" value="6"> Clean Water and Sanitation</label>
+<label><input type="checkbox" name="sdg" value="7"> Affordable and Clean Energy</label>
+<label><input type="checkbox" name="sdg" value="8"> Decent Work and Economic Growth</label>
+<label><input type="checkbox" name="sdg" value="9"> Industry, Innovation and Infrastructure</label>
+<label><input type="checkbox" name="sdg" value="10"> Reduced Inequalities</label>
+<label><input type="checkbox" name="sdg" value="11"> Sustainable Cities and Communities</label>
+<label><input type="checkbox" name="sdg" value="12"> Responsible Consumption and Production</label>
+<label><input type="checkbox" name="sdg" value="13"> Climate Action</label>
+<label><input type="checkbox" name="sdg" value="14"> Life Below Water</label>
+<label><input type="checkbox" name="sdg" value="15"> Life on Land</label>
+<label><input type="checkbox" name="sdg" value="16"> Peace, Justice and Strong Institutions</label>
+<label><input type="checkbox" name="sdg" value="17"> Partnerships for the Goals</label>
+</div>
+ 
+      <button type="submit">Submit</button>
+</form>
+</div>
+ 
+</body>
+</html>

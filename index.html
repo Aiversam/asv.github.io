@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home - My Website</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=DM+Serif+Text:ital@0;1&family=Special+Gothic+Expanded+One&display=swap">
+ <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="floating-bg">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <header>
+    <h1 class="color-changing typing">Welcome to My Website!</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="home-section scroll-reveal">
+      <h2 class="color-changing">Aiver Sam V. Santiago Website!</h2>
+      <p>Welcome to my personal website, a space where I showcase my projects, share insights about myself, and connect with visitors. The homepage features a clean design with easy navigation to About, Projects, and Contact pages. Whether you're here to explore my work or reach out, you'll find everything just a click away.</p>
+    </section>
+
+    <div class="home-image scroll-reveal">
+      <img src="C:\Users\Gmulleda\Downloads\374980.png" alt="Homepage Image">
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 My Website | Designed by Me</p>
+  </footer>
+
+  <script>
+    const revealElements = document.querySelectorAll('.scroll-reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    revealElements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

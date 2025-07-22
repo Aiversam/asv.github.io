@@ -1,0 +1,662 @@
+/* style.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+  background: url('https://wallpaperaccess.com/full/84254.jpg') no-repeat center center fixed;
+  background-size: cover;
+  line-height: 1.6;
+}
+.dm-serif-text-regular {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dm-serif-text-regular-italic {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+
+header {
+  background: url('C:\\Users\\Gmulleda\\Downloads\\84254.jpg') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  position: relative;
+  border-bottom: 4px solid #fff; /* ← This adds the border line */
+}
+
+
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  color: #ddd;
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+main {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+h2 {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 15px;
+  border-left: 5px solid #fff;
+  padding-left: 10px;
+}
+
+/* About Section */
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  padding: 60px 40px;
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  margin: 40px auto;
+  max-width: 1200px;
+  backdrop-filter: blur(6px);
+}
+
+
+.about-text {
+  max-width: 800px;
+  font-size: 1.1rem;
+  color: #ddd;
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  margin-bottom: 1.2rem;
+  text-align: justify;
+}
+
+.about-image img {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 8px rgba(255,255,255,0.2);
+}
+
+@media (min-width: 768px) {
+  .about-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .about-text {
+    flex: 2;
+    padding-right: 40px;
+  }
+
+  .about-image {
+    flex: 1;
+  }
+
+
+}
+
+.about-wrapper {
+  animation: fadeInUp 1.2s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.hobbies-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1.2rem;
+  color: #fff;
+}
+
+.hobbies-list li {
+  margin-bottom: 0.6rem;
+  font-size: 1.1rem;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.hobbies-list li::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  color: gold;
+  font-size: 1rem;
+}
+
+
+/* Projects */
+.projects-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+  padding: 20px;
+}
+
+
+.project-card {
+  background: url('C:\Users\Gmulleda\Downloads\84254.jpg') no-repeat center center;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(255,255,255,0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(255,255,255,0.3);
+}
+
+.project-card h3 {
+  color: #ffffff;
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 3px rgba(255,255,255,0.2);
+}
+
+.project-card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #cccccc;
+  line-height: 1.6;
+}
+
+.project-card a {
+  display: inline-block;
+  background-color: transparent;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #fff;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.project-card a:hover {
+  background-color: #ffffff;
+  color: #000;
+  transform: scale(1.05);
+}
+
+
+/* Contact */
+#contact {
+  margin-top: 60px;
+}
+
+.contact-box {
+  background: url('https://wallpaperaccess.com/full/48096.png') no-repeat center center;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(255,255,255,0.1);
+  max-width: 700px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.contact-box p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #ccc;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+form label {
+  text-align: left;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+form input,
+form textarea {
+  padding: 14px;
+  border: 1px solid #555;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #111;
+  color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #fff;
+  box-shadow: 0 0 5px rgba(255,255,255,0.2);
+  outline: none;
+}
+
+button {
+  margin-top: 25px;
+  padding: 14px 25px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ccc;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 25px;
+  margin-top: 60px;
+}
+/* Home Section Styling */
+.home-section {
+  text-align: center;
+  padding: 60px 30px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  max-width: 900px;
+  margin: 60px auto;
+}
+
+.home-section h2 {
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.home-section p {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav a {
+    margin: 0 10px;
+    font-size: 1rem;
+  }
+
+  
+  .home-section {
+  text-align: center;
+  padding: 60px 30px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 3px solid #ffffff; /* ← Added border */
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  max-width: 900px;
+  margin: 60px auto;
+}
+
+
+  .home-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .home-section p {
+    font-size: 1rem;
+  }
+}
+.glow {
+	 font-size: 1.5rem;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px #000000,
+    0 0 20px #000000;
+}
+h1, h2, h3 {
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  transition: transform 0.3s ease;
+}
+
+h1:hover, h2:hover {
+  transform: scale(1.05);
+}
+/* Single Home Page Image */
+.home-image {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.home-image img {
+  width: 80%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-image img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+/* Back Button Styling */
+.back-button {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.back-button button {
+  background-color: #fff;
+  color: #000;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.back-button button:hover {
+  background-color: #ddd;
+  transform: scale(1.05);
+}
+.feedback-message {
+  margin-top: 20px;
+  display: none;
+  text-align: center;
+}
+
+.feedback-message p {
+  color: #0f0;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+#register-again-btn {
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#register-again-btn:hover {
+  background-color: #ddd;
+}
+@keyframes colorCycle {
+  0%   { color: #ff4b5c; }
+  25%  { color: #ffa500; }
+  50%  { color: #00c2cb; }
+  75%  { color: #7d5fff; }
+  100% { color: #ff4b5c; }
+}
+
+.color-changing {
+  animation: colorCycle 4s infinite;
+  transition: color 0.5s ease-in-out;
+}
+
+/* Fade-in animation on page load */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Typing effect for heading */
+.typing {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #fff;
+  animation: typing 3s steps(30, end), blink-caret 0.8s step-end infinite, fadeIn 1.2s ease-in;
+  text-shadow: 0 0 5px #fff, 0 0 10px #00f2ff, 0 0 15px #00f2ff;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent }
+  50% { border-color: white }
+}
+
+/* Floating background circles */
+.floating-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.floating-bg span {
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, rgba(255,255,255,0.15), rgba(255,255,255,0));
+  animation: float 20s linear infinite;
+  border-radius: 50%;
+  bottom: -150px;
+  filter: blur(2px);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(-500px) rotate(360deg) scale(1);
+  }
+  100% {
+    transform: translateY(-1000px) rotate(720deg) scale(1.2);
+    opacity: 0;
+  }
+}
+
+
+.floating-bg span:nth-child(1) {
+  left: 25%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+}
+.floating-bg span:nth-child(2) {
+  left: 10%;
+  animation-delay: 3s;
+}
+.floating-bg span:nth-child(3) {
+  left: 70%;
+  animation-delay: 7s;
+}
+.floating-bg span:nth-child(4) {
+  left: 40%;
+  animation-delay: 5s;
+}
+.floating-bg span:nth-child(5) {
+  left: 90%;
+  animation-delay: 2s;
+}
+
+button:hover {
+  animation: pulse 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 8px rgba(255,255,255,0.2); }
+  100% { transform: scale(1.05); box-shadow: 0 0 15px rgba(255,255,255,0.4); }
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  transition: all 0.6s ease-out;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+/* New header animation */
+.hero-animation {
+  animation: fadeScaleGlow 2s ease-out forwards;
+  opacity: 0;
+  transform: scale(0.95);
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #00f2ff,
+    0 0 15px #00f2ff;
+}
+
+@keyframes fadeScaleGlow {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+    text-shadow: none;
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.letter-fade {
+  display: inline-block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.letter-fade span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: letterFade 0.6s ease forwards;
+}
+
+@keyframes letterFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bitcount-prop-single-<uniquifier> {
+  font-family: "Bitcount Prop Single", system-ui;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
+}
+.special-gothic-expanded-one-regular {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
